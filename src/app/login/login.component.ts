@@ -47,20 +47,22 @@ export class LoginComponent implements OnInit {
   
   }
 
+  
+
   // Method 4 >>  $Event Binding() >>used for accessing element
   
-  acnoChange(event:any){  //any used here because we dont know which type of data  is input by user
+  // acnoChange(event:any){  //any used here because we dont know which type of data  is input by user
    
-    this.acno=event.target.value
-    // console.log(this.acno);
+  //   this.acno=event.target.value
+  //   // console.log(this.acno);
     
   
     
-  }
-  pswChange(event:any){
-    this.psw=event.target.value
-    // console.log(this.psw);
+  // }
+  // pswChange(event:any){
+  //   this.psw=event.target.value
+  //   // console.log(this.psw);
     
 
-  }
+  // }
 }
