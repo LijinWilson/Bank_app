@@ -2,10 +2,14 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { TransactionComponent } from './transaction/transaction.component';
 
 const routes: Routes = [
-  {path:'',component:LoginComponent},
-  {path:'dashboard',component:DashboardComponent}
+  {path:'',component:LoginComponent},   /* path:''== designate first page  , component:(class name of the login page) then it will show an error click in the bulb button near to it the error will be disappeared */
+  {path:'dashboard',component:DashboardComponent},
+  {path:'register',component:RegisterComponent},
+  {path:'transaction',component:TransactionComponent}
 ];
 
 @NgModule({

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-login',
@@ -13,37 +15,24 @@ export class LoginComponent implements OnInit {
   // aim="Your perfect banking partner" /* method 1 */
   // data="enter acnum" /* method 2 */
 
-  userDetails:any={
-    1000:{acno:1000,username:"amal",password:123,balance:0},
-    1001:{acno:1001,username:"anu",password:123,balance:0},
-    1002:{acno:1002,username:"arun",password:123,balance:0},
-    1003:{acno:1003,username:"mega",password:123,balance:0}
-  }
-
-  constructor() { }
+  constructor(private router:Router,private ds:DataService) { }
 
   ngOnInit(): void {
   }
 
   login(){
-    // alert('login clicked')  /* method 3,event binding */
     var acno=this.acno
     var psw=this.psw
-    var userDetails=this.userDetails
 
-    if(acno in userDetails){
+    const result =this.ds.login(acno,psw) //here we passing argument as same as above / input taking from the user (ng model)
 
-      if(psw==userDetails[acno]['password']){
-        alert('Login successfully')
-      }
-      else{
-        alert('incorrect Password')
-      }
-      
+    if(result){
+      alert('login successfull')
+      this.router.navigateByUrl('dashboard')
     }
-    else{
-      alert('User not excist')
-    }
+
+    //else case is already defined in the dataservice
+   
   
   }
 
