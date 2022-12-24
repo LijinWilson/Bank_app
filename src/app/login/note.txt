@@ -1,0 +1,38 @@
+
+                                            ----------------<< Data Sharing >>----------------
+                                                            ------------------
+ts :Component
+html:View
+
+>> 1)One way binding:
+        * data sharing only in one direction.
+
+                                    >> Component to View sharing data's <<
+                                    --------------------------------------
+
+                                                    __types__
+
+        1) String interpolation:
+        ------------------------
+            *create an _variable_ with any content then on html file  >> call that variable where we want to display >>{{variable_name}}
+    
+        2) Property Binding:
+        --------------------
+            *used to change content in an Property.
+            *for eg:placeholder=""
+            *create an variable with content on ts ,then on html file >> call that variable inside the placeholder >> placeholder="variable_name"
+
+
+                                            >> View to Component <<
+                                            -----------------------
+
+                                                    __types__
+        
+        1) Event Binding:
+        -----------------
+            *(event name)=function_name()
+            
+        2) $-Event binding:
+        -------------------
+            *on html file (change)=function_name($event)
+            *on ts file create the function for function_name(event){}

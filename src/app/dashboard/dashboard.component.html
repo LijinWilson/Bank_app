@@ -1,22 +1,32 @@
-<div class="container-fluid " style="background-image: url(..//../assets/dash_bg.jpg); background-repeat: no-repeat; background-size: cover; ">
+<div class="container-fluid "
+    style="background-image: url(..//../assets/dash_bg.jpg); background-repeat: no-repeat; background-size: cover; ">
 
     <div class="row " style="margin-bottom: 10px;">
-        <div class="text-center "><h3 class="" style="color: orangered;">Welcome {{user}}</h3></div>
-        <div class="text-center " ><a style="text-decoration: none; color: orangered; " routerLink="/transaction">View Transaction</a></div>
-    
+        <div class="text-center ">
+            <h3 class="" style="color: orangered;">Welcome {{user}}</h3>
+        </div>
+        <div class="text-center ">
+            <a style="text-decoration: none; color: orangered; " routerLink="/transaction">View Transaction</a>
+            
+        </div>
+        <div class="d-flex justify-content-end  ">
+            <button class="btn btn-outline-danger" (click)="logut()">Logout</button>
+        </div>
+
         <div class="col-lg-6 col-md-12 col-sm-12   ">
-            <form (ngSubmit)="deposit()" class="container  "  style="background-color:rgba(0,0,0,0.5) ; border-radius: 40px;">
+            <form (ngSubmit)="deposit()" class="container  "
+                style="background-color:rgba(0,0,0,0.5) ; border-radius: 40px;">
                 <div class="mt-5">
 
                     <h2 class="mt-5 text-center " style="color: orangered;letter-spacing: 5px;">Deposit</h2>
-                    <input [(ngModel)]="acno" class="form-control mt-5 bg-light p-2" style="border-radius: 20px;" type="text" name="uname1"
-                        id="acid1" placeholder="Account Number">
+                    <input [(ngModel)]="acno" class="form-control mt-5 bg-light p-2" style="border-radius: 20px;"
+                        type="text" name="uname1" id="acid1" placeholder="Account Number">
 
-                    <input [(ngModel)]="psw" class="form-control mt-3 bg-light p-2" style="border-radius: 20px;" type="password"
-                        name="pswd1" id="psid1" placeholder="Password">
+                    <input [(ngModel)]="psw" class="form-control mt-3 bg-light p-2" style="border-radius: 20px;"
+                        type="password" name="pswd1" id="psid1" placeholder="Password">
 
-                    <input [(ngModel)]="amnt" class="form-control mt-3 bg-light p-2" style="border-radius: 20px;" type="text" name="amnd1"
-                        id="amid1" placeholder="Amount">
+                    <input [(ngModel)]="amnt" class="form-control mt-3 bg-light p-2" style="border-radius: 20px;"
+                        type="text" name="amnd1" id="amid1" placeholder="Amount">
 
                 </div>
                 <div class="text-center">
@@ -27,18 +37,19 @@
 
         </div>
         <div class="col-lg-6 col-md-12 col-sm-12 " style="margin-bottom: 71px;">
-            <form (ngSubmit)="withdraw()" class="container mb-5"style="background-color:rgba(0,0,0,0.5) ; border-radius: 40px;">
+            <form (ngSubmit)="withdraw()" class="container mb-5"
+                style="background-color:rgba(0,0,0,0.5) ; border-radius: 40px;">
                 <div class="mt-5">
 
                     <h2 class="mt-5 text-center " style="color: orangered;letter-spacing: 5px;">Withdraw</h2>
-                    <input [(ngModel)]="acno1" class="form-control mt-5 bg-light p-2" style="border-radius: 20px;" type="text" name="uname"
-                        id="acid" placeholder="Account Number">
+                    <input [(ngModel)]="acno1" class="form-control mt-5 bg-light p-2" style="border-radius: 20px;"
+                        type="text" name="uname" id="acid" placeholder="Account Number">
 
-                    <input [(ngModel)]="psw1" class="form-control mt-3 bg-light p-2" style="border-radius: 20px;" type="password"
-                        name="pswd" id="psid" placeholder="Password">
+                    <input [(ngModel)]="psw1" class="form-control mt-3 bg-light p-2" style="border-radius: 20px;"
+                        type="password" name="pswd" id="psid" placeholder="Password">
 
-                    <input [(ngModel)]="amnt1" class="form-control mt-3 bg-light p-2" style="border-radius: 20px;" type="text" name="amnd"
-                        id="amid" placeholder="Amount">
+                    <input [(ngModel)]="amnt1" class="form-control mt-3 bg-light p-2" style="border-radius: 20px;"
+                        type="text" name="amnd" id="amid" placeholder="Amount">
 
                 </div>
                 <div class="text-center">
@@ -48,6 +59,7 @@
             </form>
 
         </div>
+
     </div>
-    
+
 </div>

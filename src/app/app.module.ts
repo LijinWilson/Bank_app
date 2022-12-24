@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms'; // it must be imported if not come. most commonly added by automatically
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // it must be imported if not come. most commonly added by automatically
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -20,7 +20,8 @@ import { TransactionComponent } from './transaction/transaction.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule //latest added module
+    FormsModule, //latest added module
+    ReactiveFormsModule //used for form validation
   ],
   providers: [],
   bootstrap: [AppComponent]
